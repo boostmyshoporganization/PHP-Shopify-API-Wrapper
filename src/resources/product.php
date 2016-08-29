@@ -113,7 +113,74 @@ return array(
             "httpMethod" => "GET",
             "uri" => "/admin/products/count.json",
             "summary" => "Retrieve a count of all Products",
-            "responseModel" => "defaultJsonResponse"
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "since_id" => array(
+                    "type" => "integer",
+                    "location" => "query",
+                    "description" => "Restrict results to after the specified ID"
+                ),
+                "vendor" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Filter by product vendor"
+                ),
+                "handle" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Filter by product handle"
+                ),
+                "product_type" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Filter by product type"
+                ),
+                "collection_id" => array(
+                    "type" => "integer",
+                    "location" => "query",
+                    "description" => "Filter by collection id"
+                ),
+                "created_at_min" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products created after date (format: 2008-12-31 03:00)"
+                ),
+                "created_at_max" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products created before date (format: 2008-12-31 03:00)"
+                ),
+                "updated_at_min" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products last updated after date (format: 2008-12-31 03:00)"
+                ),
+                "updated_at_max" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products last updated before date (format: 2008-12-31 03:00)"
+                ),
+                "published_at_min" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products published after date (format: 2008-12-31 03:00)"
+                ),
+                "published_at_max" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Show products published before date (format: 2008-12-31 03:00)"
+                ),
+                "published_status" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "published - Show only published products. unpublished - Show only unpublished products. any - Show all products (default)"
+                ),
+                "fields" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "comma-separated list of fields to include in the response"
+                )
+            )
         ),
         
 
