@@ -120,6 +120,11 @@ return array(
                     "location" => "query",
                     "description" => "Restrict results to after the specified ID"
                 ),
+                "title" => array(
+                    "type" => "string",
+                    "location" => "query",
+                    "description" => "Filter by title handle"
+                ),
                 "vendor" => array(
                     "type" => "string",
                     "location" => "query",
