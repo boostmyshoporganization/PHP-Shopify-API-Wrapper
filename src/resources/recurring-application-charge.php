@@ -111,6 +111,33 @@ return array(
 	            )
             )
         ),
+
+        /**
+         *    createRecurringApplicationCharge() method
+         *
+         *    reference: http://docs.shopify.com/api/recurringapplicationcharge
+         */
+        "createRecurringApplicationUsageCharge" => array(
+            "httpMethod" => "POST",
+            "uri" => "/admin/recurring_application_charges/{id}/usage_charges.json",
+            "summary" => "Create recurring application usage charge.",
+            "responseModel" => "defaultJsonResponse",
+            "parameters" => array(
+                "usage_charge" => array(
+                    "location" => "json",
+                    "parameters" => array(
+                        "description" => array(
+                            "type" => "string",
+                            "location" => "json",
+                        ),
+                        "price" => array(
+                            "type" => "string",
+                            "location" => "json",
+                        ),
+                    )
+                )
+            )
+        ),
         
         
          /**
